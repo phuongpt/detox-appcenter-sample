@@ -31,6 +31,9 @@ npm install -g detox-cli
 echo "Installing dependencies for detox tests..."
 npm install
 
+echo "Update pod"
+cd ios && pod install && cd ..
+
 echo "Building the project for Detox tests..."
 detox build --configuration ios.sim.release
 
