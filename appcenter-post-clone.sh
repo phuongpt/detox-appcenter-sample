@@ -13,11 +13,14 @@ sh buildForBrew.sh .
 cd ..
 export PATH=$PATH:./simutils/build/Build/Products/Release
 
-# echo "Installing correct node version..."
-# export HOMEBREW_NO_AUTO_UPDATE=1
-# brew uninstall node@6
-# brew install node@8
-# brew link node@8 --force --overwrite
+echo "Installing NVM..."
+brew install nvm
+source $(brew --prefix nvm)/nvm.sh
+
+echo "Installing v8.5..."
+nvm install v8.5.0
+nvm use --delete-prefix v8.5.0
+nvm alias default v8.5.0
 
 echo "Identifying selected node version..."
 node --version
