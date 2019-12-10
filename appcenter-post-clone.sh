@@ -11,6 +11,10 @@ curl https://raw.githubusercontent.com/wix/homebrew-brew/master/AppleSimulatorUt
 tar xzvf applesimutils.tar.gz
 sh buildForBrew.sh .
 cd ..
+
+echo "Getting simulators..."
+applesimutils --list
+
 export PATH=$PATH:./simutils/build/Build/Products/Release
 
 echo "Installing NVM..."
