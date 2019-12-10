@@ -23,9 +23,9 @@ echo "Installing dependencies for detox tests..."
 npm install
 
 echo "Building the project for Detox tests..."
-npx detox build --configuration ios.sim.release
+detox build --configuration ios.sim.release
 
 echo "Executing Detox tests..."
-npx detox test --configuration ios.sim.release --cleanup
+detox test --configuration ios.sim.release --cleanup
 
 echo "POST CLONE COMPLETED"
