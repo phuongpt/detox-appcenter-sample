@@ -2,18 +2,9 @@
 
 echo "POST CLONE STARTED"
 
-APPLESIMUTILS_VERSION=0.7.2
-
-echo "Installing applesimutils... "
-echo https://github.com/wix/AppleSimulatorUtils/archive/${APPLESIMUTILS_VERSION}.tar.gz
-mkdir simutils
-cd simutils
-curl -L https://github.com/wix/AppleSimulatorUtils/archive/${APPLESIMUTILS_VERSION}.tar.gz -o applesimutils.tar.gz
-tar xzvf applesimutils.tar.gz
-sh buildForBrew.sh .
-cd ..
-
-export PATH=$PATH:./simutils/build/Build/Products/Release
+echo "iOS: Installing applesimutils..."
+brew tap wix/brew
+brew install wix/brew/applesimutils
 
 echo "Installing NVM..."
 brew install nvm
@@ -33,15 +24,15 @@ npm install -g detox-cli
 echo "Installing dependencies for detox tests..."
 yarn
 
-echo "Update pod"
+echo "iOS: Update pod"
 cd ios  
 pod install
 cd ..
 
-echo "Building the project for Detox tests..."
-detox build --configuration ios.sim.release
+echo "iOS: Building the project for Detox tests..."
+yarn detox build --configuration ios.sim.release
 
-echo "Executing Detox tests..."
-detox test --configuration ios.sim.release --cleanup
+echo "iOS: Executing Detox tests..."
+yarn detox test --configuration ios.sim.release --cleanup
 
 echo "POST CLONE COMPLETED"

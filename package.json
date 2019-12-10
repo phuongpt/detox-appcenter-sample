@@ -41,7 +41,7 @@
       },
        "ios.sim.release": {
         "binaryPath": "ios/build/Build/Products/Release-iphonesimulator/detox.app",
-        "build": "set -o pipefail && export CODE_SIGNING_REQUIRED=NO && export RCT_NO_LAUNCH_PACKAGER=true && xcodebuild -workspace ios/detox.xcworkspace  -UseNewBuildSystem=NO -scheme detox -configuration Release -sdk iphonesimulator -derivedDataPath ios/build | xcpretty",
+        "build": "set -o pipefail && export CODE_SIGNING_REQUIRED=NO && export RCT_NO_LAUNCH_PACKAGER=true && xcodebuild -workspace ios/detox.xcworkspace  -UseNewBuildSystem=NO -scheme detox -configuration Release -sdk iphonesimulator -derivedDataPath ios/build",
         "type": "ios.simulator",
         "name": "iPhone 8"
       }
