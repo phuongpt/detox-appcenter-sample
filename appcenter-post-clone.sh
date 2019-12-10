@@ -4,7 +4,8 @@ echo "POST CLONE STARTED"
 
 APPLESIMUTILS_VERSION=0.7.2
 
-echo "Installing applesimutils..."
+echo "Installing applesimutils... "
+echo https://github.com/wix/AppleSimulatorUtils/archive/${APPLESIMUTILS_VERSION}.tar.gz
 mkdir simutils
 cd simutils
 curl https://github.com/wix/AppleSimulatorUtils/archive/${APPLESIMUTILS_VERSION}.tar.gz -o applesimutils.tar.gz
