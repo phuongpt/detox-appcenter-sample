@@ -1,6 +1,7 @@
+#!/usr/bin/env bash
+
 echo "POST CLONE STARTED"
 
-#!/usr/bin/env bash
 APPLESIMUTILS_VERSION=0.7.6
 
 echo "Installing applesimutils..."
