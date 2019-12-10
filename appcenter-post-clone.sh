@@ -7,7 +7,7 @@ APPLESIMUTILS_VERSION=0.7.6
 echo "Installing applesimutils..."
 mkdir simutils
 cd simutils
-curl https://raw.githubusercontent.com/wix/homebrew-brew/master/AppleSimulatorUtils-${APPLESIMUTILS_VERSION}.tar.gz -o applesimutils.tar.gz
+curl https://github.com/wix/AppleSimulatorUtils/archive/${APPLESIMUTILS_VERSION}.tar.gz -o applesimutils.tar.gz
 tar xzvf applesimutils.tar.gz
 sh buildForBrew.sh .
 cd ..
