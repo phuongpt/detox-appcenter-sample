@@ -2,7 +2,7 @@
 
 echo "POST CLONE STARTED"
 
-APPLESIMUTILS_VERSION=0.7.6
+APPLESIMUTILS_VERSION=0.7.2
 
 echo "Installing applesimutils..."
 mkdir simutils
