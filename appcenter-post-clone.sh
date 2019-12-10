@@ -19,6 +19,12 @@ export PATH=$PATH:./simutils/build/Build/Products/Release
 # brew install node@8
 # brew link node@8 --force --overwrite
 
+echo "Identifying selected node version..."
+node --version
+
+echo "Installing detox cli..."
+npm install -g detox-cli
+
 echo "Installing dependencies for detox tests..."
 npm install
 
