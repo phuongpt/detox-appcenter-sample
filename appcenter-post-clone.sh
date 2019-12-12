@@ -33,5 +33,4 @@ detox clean-framework-cache && detox build-framework-cache
 echo "iOS: Executing Detox tests..."
 yarn detox test --configuration ios.sim.release --cleanup
 
-
 echo "POST CLONE COMPLETED"
