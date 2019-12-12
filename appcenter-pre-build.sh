@@ -2,6 +2,11 @@
 
 echo "PRE BUILD STARTED"
 
+echo "iOS: Update pod"
+cd ios  
+pod install
+cd ..
+
 echo "iOS: Building the project for Detox tests..."
 npx detox build --configuration ios.sim.release
 
