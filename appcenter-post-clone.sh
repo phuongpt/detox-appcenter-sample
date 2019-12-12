@@ -24,4 +24,15 @@ npm install -g detox-cli
 echo "Installing dependencies for detox tests..."
 yarn
 
+echo "iOS: Update pod"
+cd ios  
+pod install
+cd ..
+
+echo "iOS: Building the project for Detox tests..."
+yarn detox build --configuration ios.sim.release
+
+echo "iOS: Cleaning cache for Detox tests..."
+detox clean-framework-cache && detox build-framework-cache
+
 echo "POST CLONE COMPLETED"
